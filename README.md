@@ -116,9 +116,9 @@ El primer pivote anterior se considera igual a `1`.
 - [x] Implementación inicial del método de Montante.
 - [x] Entrada de sistemas mediante consola.
 - [x] Construcción de la matriz aumentada.
-- [ ] Manejo de pivotes nulos.
-- [ ] Detección de sistemas sin solución.
-- [ ] Detección de sistemas con infinitas soluciones.
+- [x] Manejo de pivotes nulos.
+- [x] Detección de sistemas sin solución.
+- [x] Detección de sistemas con infinitas soluciones.
 - [ ] Mostrar el procedimiento de Montante paso a paso.
 - [ ] Implementación completa de pruebas automáticas.
 - [ ] Documentación final.
