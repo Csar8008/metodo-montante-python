@@ -36,10 +36,6 @@ def resolver_montante(matriz: list[list[float]], size: int) -> list[float]:
                 matriz_anterior[fila_pivote],
                 matriz_anterior[iteracion],
             )
-            matriz_actual[iteracion], matriz_actual[fila_pivote] = (
-                matriz_actual[fila_pivote],
-                matriz_actual[iteracion],
-            )
         pivote_actual = matriz_anterior[iteracion][iteracion]
 
         for j in range(size + 1):
@@ -50,7 +46,7 @@ def resolver_montante(matriz: list[list[float]], size: int) -> list[float]:
                 continue
 
             for j in range(size + 1):
-                if j == iteracion or j < iteracion:
+                if j == iteracion :
                     matriz_actual[i][j] = 0
                 else:
                     matriz_actual[i][j] = (
