@@ -17,7 +17,7 @@ def ejecutar():
             min_val=2
         )
 
-        matriz = [[0] * (n + 1) for _ in range(n)]
+        matriz = [[0.0] * (n + 1) for _ in range(n)]
         ingresadas = [False] * n
 
         while True:
