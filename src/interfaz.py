@@ -32,3 +32,26 @@ def mostrar_sistema(matriz: list[list[float]], ingresadas: list[bool]):
         ecuacion_str = " ".join(terminos)
         print(f"{ecuacion_str} = {matriz[i][n]:g}")
     print()
+
+
+def imprimir_matriz(matriz: list[list[float]], titulo: str):
+    print(f"\n{titulo}:")
+    for fila in matriz:
+        elementos = "  ".join(f"{val:10.5f}" for val in fila)
+        print(f"| {elementos} |")
+
+
+def mostrar_resultados(res: dict, n: int):
+    print("\n==========================================")
+    print("          RESULTADOS DE MONTANTE          ")
+    print("==========================================")
+
+    print(f"\nDeterminante: {res['determinante']:g}")
+
+    imprimir_matriz(res["adjunta"], "Matriz Adjunta")
+    imprimir_matriz(res["inversa"], "Matriz Inversa")
+
+    print("\nSolución del Sistema:")
+    for i in range(n):
+        print(f" x{a_subindice(i + 1)} = {res['soluciones'][i]:g}")
+    print("==========================================")
