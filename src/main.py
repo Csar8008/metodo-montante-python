@@ -1,4 +1,4 @@
-from interfaz import a_subindice, mostrar_sistema
+from interfaz import a_subindice, mostrar_resultados, mostrar_sistema
 from montante import MontanteError, resolver_montante
 from validaciones import limpiar_pantalla, pedir_entero, pedir_flotante
 
@@ -9,7 +9,7 @@ def ejecutar():
         limpiar_pantalla()
 
         print("==========================================")
-        print("      SOLUCION POR MÉTODO DE MONTANTE     ")
+        print("      SOLUCIÓN POR MÉTODO DE MONTANTE     ")
         print("==========================================")
 
         n = pedir_entero(
@@ -32,10 +32,10 @@ def ejecutar():
                     break
 
             print("Opciones:")
-            print(f" presione de 1 a {n} para Modificar una ecuacion")
+            print(f"-presione de 1 a {n} para Modificar una ecuacion")
 
             if todas_completas:
-                print("presiona 0 Resolver el sistema")
+                print("-presiona 0 Resolver el sistema")
 
             opcion = pedir_entero(
                 "\nSeleccione una opcion: ",
@@ -95,18 +95,8 @@ def ejecutar():
 
         try:
 
-            soluciones = resolver_montante(matriz, n)
-
-            print("\n==========================================")
-            print("          SOLUCION DEL SISTEMA             ")
-            print("==========================================")
-
-            for i in range(n):
-                print(
-                    f" x{a_subindice(i + 1)} = {soluciones[i]:g}"
-                )
-
-            print("==========================================")
+            resultados = resolver_montante(matriz, n)
+            mostrar_resultados(resultados, n)
 
         except MontanteError as err:
 
